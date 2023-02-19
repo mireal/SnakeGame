@@ -76,8 +76,7 @@ class Event_handler:
         self.keyboard_input()
         self.check_collision()
         pygame.display.update()
-        if self.check_collision() == True:
-            print('ded')
+        self.check_fail()
 
     def keyboard_input(self):
         for event in pygame.event.get():
@@ -101,10 +100,11 @@ class Event_handler:
             self.fruit.set_position()
 
     def check_fail(self):
-        if 0 > self.snake.body[0].x > CELL or 0 > self.snake.body[0].y > CELL:
+        if not 0 <= self.snake.body[0].x < CELL or not 0 <= self.snake.body[0].y < CELL:
             self.game_over()
 
     def game_over(self):
+        print('Game over!')
         pygame.quit()
 
 
