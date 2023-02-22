@@ -42,9 +42,6 @@ class EventHandler:
         checked_rect = self.snake.body[1]
         return nest_position == checked_rect
 
-    def snake_test_bot(self):
-        pass
-
     def check_fruit_collision(self):
         if self.fruit.pos == self.snake.body[0]:
             self.snake.grow = True

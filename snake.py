@@ -25,6 +25,3 @@ class Snake:
             body_split = self.body[:-1]
             body_split.insert(0, body_split[0] + self.direction)
             self.body = body_split[:]
-
-    def add_block(self):
-        self.grow = True
