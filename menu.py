@@ -1,5 +1,5 @@
 import pygame
-from config import BACKGROUND_COLOR, FONT_COLOR, WIN_SIZE, BUTTON_COLOR
+from config import BACKGROUND_COLOR_1, FONT_COLOR, WIN_SIZE, BUTTON_COLOR
 
 # Menu items
 menu_items = ["Start", "Settings", "Exit"]
@@ -40,7 +40,7 @@ class GameMenu:
                                 pygame.quit()
 
             # Clear the screen
-            self.game_window.fill(BACKGROUND_COLOR)
+            self.game_window.fill(BACKGROUND_COLOR_1)
 
             # Draw menu items
             for i, item in enumerate(menu_items):
