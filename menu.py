@@ -56,3 +56,6 @@ class GameMenu:
 
             # Update the screen
             pygame.display.flip()
+
+    def settings_menu(self):
+        pass
