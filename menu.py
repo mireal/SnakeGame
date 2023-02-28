@@ -5,7 +5,7 @@ from config import BACKGROUND_COLOR_1, FONT_COLOR, WIN_SIZE, BUTTON_COLOR
 menu_items = ["Start", "Settings", "Exit"]
 
 # Define y-coordinate of top of first menu item
-menu_top = 50
+menu_top = 130
 
 
 class GameMenu:

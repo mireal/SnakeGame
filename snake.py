@@ -6,8 +6,8 @@ from config import CELL, SNAKE_HEAD, SNAKE_BODY, SNAKE_TAIL, SNAKE_TURN
 class Snake:
     def __init__(self, game_window):
         self.game_window = game_window
-        self.body = [Vector2(2, 9), Vector2(1, 9), Vector2(0, 9)]
-        self.direction = Vector2(1, 0)
+        self.body = [Vector2(3, 9), Vector2(2, 9), Vector2(1, 9)]
+        self.direction = Vector2(0, 0)
         self.grow = False
 
         self.head_image = pygame.transform.scale(SNAKE_HEAD, (CELL, CELL))
@@ -74,12 +74,13 @@ class Snake:
                             self.game_window.blit(turn, block_rect)
 
     def move_snake(self):
-        if self.grow is True:
-            body_split = self.body[:]
-            body_split.insert(0, body_split[0] + self.direction)
-            self.body = body_split[:]
-            self.grow = False
-        else:
-            body_split = self.body[:-1]
-            body_split.insert(0, body_split[0] + self.direction)
-            self.body = body_split[:]
+        if self.direction != Vector2(0, 0):
+            if self.grow is True:
+                body_split = self.body[:]
+                body_split.insert(0, body_split[0] + self.direction)
+                self.body = body_split[:]
+                self.grow = False
+            else:
+                body_split = self.body[:-1]
+                body_split.insert(0, body_split[0] + self.direction)
+                self.body = body_split[:]

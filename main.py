@@ -11,7 +11,7 @@ pygame.time.set_timer(SCREEN_UPDATE, GAME_SPEED)
 game_window = pygame.display.set_mode((WIN_SIZE, WIN_SIZE))
 clock = pygame.time.Clock()
 
-font = pygame.font.SysFont('comicsansms', 40)
+font = pygame.font.SysFont('pixelmix', 60)
 
 events = EventHandler(game_window, SCREEN_UPDATE)
 menu = GameMenu(game_window, font, SCREEN_UPDATE)
@@ -42,7 +42,7 @@ def main():
         if menu.game_state == 'menu':
             menu.main_menu()
         else:
-            events.update()
+           events.update()
 
 
 if __name__ == '__main__':

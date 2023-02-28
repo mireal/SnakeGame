@@ -28,16 +28,16 @@ class EventHandler:
             if event.type == pygame.QUIT:
                 pygame.quit()
             elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_UP and not self.check_collision(MOVE_UP):
+                if event.key == pygame.K_UP and not self.check_turn_collision(MOVE_UP):
                     self.snake.direction = MOVE_UP
-                elif event.key == pygame.K_DOWN and not self.check_collision(MOVE_DOWN):
+                elif event.key == pygame.K_DOWN and not self.check_turn_collision(MOVE_DOWN):
                     self.snake.direction = MOVE_DOWN
-                elif event.key == pygame.K_LEFT and not self.check_collision(MOVE_LEFT):
+                elif event.key == pygame.K_LEFT and not self.check_turn_collision(MOVE_LEFT):
                     self.snake.direction = MOVE_LEFT
-                elif event.key == pygame.K_RIGHT and not self.check_collision(MOVE_RIGHT):
+                elif event.key == pygame.K_RIGHT and not self.check_turn_collision(MOVE_RIGHT):
                     self.snake.direction = MOVE_RIGHT
 
-    def check_collision(self, direction):  # check for the possible collision with snake body
+    def check_turn_collision(self, direction):  # check for the possible collision with snake body
         nest_position = self.snake.body[0] + direction
         checked_rect = self.snake.body[1]
         return nest_position == checked_rect
