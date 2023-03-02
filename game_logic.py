@@ -17,7 +17,7 @@ class EventHandler:
         self.snake.draw_snake()
         self.keyboard_input()
         self.check_fruit_collision()
-        pygame.display.update()
+        # pygame.display.update()
         self.check_fail()
         self.show_score()
 

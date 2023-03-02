@@ -22,3 +22,6 @@ SNAKE_HEAD = pygame.image.load('assets/snake_head.png')
 SNAKE_TAIL = pygame.image.load('assets/snake_tail.png')
 SNAKE_BODY = pygame.image.load('assets/snake_body.png')
 SNAKE_TURN = pygame.image.load('assets/snake_turn.png')
+
+START_BUTTON = pygame.image.load('assets/start.png')
+SETTINGS_WINDOW = pygame.image.load('assets/settings.png')
