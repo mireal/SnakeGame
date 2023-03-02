@@ -40,7 +40,7 @@ class GameMenu:
                                 pygame.quit()
 
             # Clear the screen
-            self.game_window.fill(BACKGROUND_COLOR_1)
+            # self.game_window.fill(BACKGROUND_COLOR_1)
 
             # Draw menu items
             for i, item in enumerate(menu_items):
