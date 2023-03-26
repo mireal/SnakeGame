@@ -14,6 +14,7 @@ clock = pygame.time.Clock()
 events = EventHandler(game_window, SCREEN_UPDATE)
 menu = Menu(game_window, SCREEN_UPDATE)
 
+pygame.display.set_caption('Snake game')
 
 def main():
     while True:

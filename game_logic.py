@@ -36,6 +36,8 @@ class EventHandler:
                     self.snake.direction = MOVE_LEFT
                 elif event.key == pygame.K_RIGHT and not self.check_turn_collision(MOVE_RIGHT):
                     self.snake.direction = MOVE_RIGHT
+                elif event.key == pygame.K_SPACE:
+                    self.snake.direction = pygame.math.Vector2(0, 0)
 
     def check_turn_collision(self, direction):  # check for the possible collision with snake body
         nest_position = self.snake.body[0] + direction
